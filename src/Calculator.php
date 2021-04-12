@@ -1,24 +1,22 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: phanluan
- * Date: 25/10/2018
- * Time: 00:02
- */
 
+const ADDITION = '+';
+const SUBTRACTION = '-';
+const MULTIPLICATION = '*';
+const DIVISION = '/';
 class Calculator
 {
-    public function calculate($a, $b, $o) {
-        switch ($o) {
+    public function calculate($firstOperand, $secondOperand, $operator) {
+        switch ($operator) {
             case '+':
-                return $a + $b;
+                return $firstOperand + $secondOperand;
             case '-':
-                return $a - $b;
+                return $firstOperand - $secondOperand;
             case '*':
-                return $a * $b;
+                return $firstOperand * $secondOperand;
             case '/':
-                if ($b != 0) {
-                    return $a / $b;
+                if ($secondOperand != 0) {
+                    return $firstOperand / $secondOperand;
                 } else {
                     echo("Can not divide by 0");
                     break;
